@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="250" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="object" tilewidth="32" tileheight="32">
+  <image source="object.png" width="256" height="1024"/>
+ </tileset>
+ <tileset firstgid="257" name="scene" tilewidth="32" tileheight="32">
+  <image source="scene.png" width="1024" height="2048"/>
+ </tileset>
+ <layer name="background" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2udRlWEQhuHzh/N+5NADOdMDOdMDOdODgpLUHlQwgNqDOduDCmatwLuHd2Zndud5Zq6f92wDW06lUkKBSlShGjWoRR3q0YBGNKECZXXq1GV1lmvhXiva0I4OdKIL3ehBL/rQjwE0J3Xq1OV2lhvi3jBGMIoxjGMCk5jCNGYwizkMJnXq1OV2llvg3iKWsIwVrGIN69jAJrawjR3MJ3Xq1OV2lrvKvV3s4RquYx8HOMQRjnEDN3ELV5I6depyO8vd4d5dnOAU93AfD/AQZzjHIzzGE9xO6tSpy+0s94x7z/ECL/EKr/EGb/EO7/EBH/EJT5M6depyO8t94d5XXOAS3/AdP/ATv/Abf/AX//A5qVOnLrezXLkolRIKVKIK1ahBLepQjwY0ogkVhTp16nI7y7VwrxVtaEcHOtGFbvSgF33oxwCaC3Xq1OV2lhvi3jBGMIoxjGMCk5jCNGYwizkMFurUqcvtLLfAvUUsYRkrWMUa1rGBTWxhGzuYL9SpU5fbWc7Df6A6dRE7y3n4D1SnLmJnOQ//gerURews5+E/UJ26iJ3lPPwHqlMXsbOch/9Adeoidpbz8B+oTl3EznIe/gPVqYvYWc7Df6A6dRE7y3n4D1SnLmJnOQ//gerURews5+E/UJ26iJ3lPPwHqlMXsbOch/9Adeoidpbz8B+oTl3EznIe/gPVqYvYWc7Df6A6dRE7y3n4D1SnLmJnOQ//gerURews5+E/UJ26iJ3lPPwHqlMXsbOch/9Adeoidpbz8B+oTl3EznIe/gPVqYvYWc7Df6A6dRE7y3n4D1SnLmJnOQ//gerURews5+E/UJ26iJ3l/gNp6vWW
+  </data>
+ </layer>
+ <layer name="pillar" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAMAqB5rX9jH2MAnwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZ+igAJ
+  </data>
+ </layer>
+ <layer name="big_cloud" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAMAqB5rX9jH2MAnwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZ+igAJ
+  </data>
+ </layer>
+ <layer name="small_cloud" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAMAqB5rX9jH2MAnwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZ+igAJ
+  </data>
+ </layer>
+ <layer name="hill" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAMAqB5rX9jH2MAnwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZ+igAJ
+  </data>
+ </layer>
+ <layer name="ground" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAMAqB5rX9jH2MAnwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZ+igAJ
+  </data>
+ </layer>
+ <layer name="barrier" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmGFOxCAQhXc16028iXoRVy+iB7f9YdIQKMwwMzzY9yWTum0ZppTng14u43i+Duw8AakWQlYCSVtItRCyEkjaQqqFkJVA0hZSLTVmqpUQpPmKVEuNmWolBGm+ItVSY6Zaybrs8/AsWu+bNSLGl5CRROoAMRd1TlYnys+O/aHlos7JykRr/L9PtFzUOVmVksaj98Jn3wBaarKq/yyHBdQ5iaamkUfHS+czfC8ka0CNn4OsL5Q6CDYajUet372eTZMDVesINRBsejTuWZNVnt5aR6+b0+8RtXuQeNnqul11R2IHosaP/fS0HR21eiTPfmxTel+IaDV+A32eGUHWeC9RNXrsMXK/a+OO+k7o52OZSeMtfY7aM3v0k/p2um6nnxMPvNato7RpSU6D0mfN/d16zOVAgn7+2IzQuVaDlvfWdH78LdE6qs7p5/EgeSqyn0fXYdEfytil0M8xidKb1ONK5z3+X6HoXFIHqs7p57hIdFK772wOe/r5bDqvaV26X0eBfh7H2Ryo6bCWtzZHS9cjdN4T1vk0/Uo0jqpz+nkcrV6Ruy7x497rqHN1x3IN7fGcqGNHP4+j5E+5Y+6+yGit/+y8B9S5Dvp5HKmGauvAtG0ppzWoc3UnSueStbq2vkjo53FI9n65tpLzPVjmlO6DNXvnnn332RpGo3XP9VQP9PM4WudTqa3kfA/WOp8BL30d84+Efh5Hi3fUzmnOS3lEne94aR1hDOjncUjXZQg6760BYY5LsFrDt+7HoqCfxyHRucW+TtvW0897avIYh1LNHlofCf08Du/vLz3tEeZiirYmi2fx3q/vfG7570HjTj9fB+q8r10uj+e4/Gy5f4PGnX6+DtR5X7tSLq+xidQ5/dyHt6fL5Z3BUMTHFq9X26Cf+3Df3tUXg6GI7yf7+Ug/94E6Z2jDQ+f0cx+oc4Y26OfzQJ0ztEE/n4c/ojcsvg==
+  </data>
+ </layer>
+ <layer name="object_image" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztzrENwzAMBECN9qslnTN1XLm0IcUCZeQOYEOK1LcGAADQWqoDAAAAAACHVAcAAAAAlpbBGQAA/ItUBwAeIdUBAAAAAIBTKbpz178wU256AwAAAAAA9ElnHwAAAFhTOvvAtQzORm8+SQr3z3ZHZ7947fWedBtYw7bXpzoEAAAAAMAkXzRjB9c=
+  </data>
+ </layer>
+ <layer name="monster_image" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztzrENwCAMBEBG+/2nSpeSCERkEHelH5tvDQAAoLVUFwAAAAAAXqkuAAAAAGwtkxkAANwi1QWAI6S6AAAAAADQlaI7q/6FP2XRGwAAAAAAYEwG5wAAAMCeMjgHvmUym715khTu93ZnMwAAAAAAgFs9a7MFwQ==
+  </data>
+ </layer>
+ <objectgroup name="object" width="250" height="40">
+  <object name="prop" x="4264" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="4040" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="3816" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="3336" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="3304" y="680" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="2920" y="680" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="2824" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="2600" y="392" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="2344" y="680" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="2376" y="392" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1864" y="520" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1896" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1704" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1224" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1352" y="904" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1160" y="904" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1320" y="488" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1032" y="712" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="744" y="712" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="776" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="552" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="808" y="104" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="1128" y="264" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropdisk"/>
+    <property name="b" value="behpropdisk"/>
+    <property name="isstrikable" value="false"/>
+    <property name="isstrikablewithmap" value="false"/>
+    <property name="nokill" value="true"/>
+   </properties>
+  </object>
+  <object name="monster" x="5000" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="appboss"/>
+    <property name="b" value="behboss"/>
+   </properties>
+  </object>
+  <object name="dispenser" x="72" y="1000" width="16" height="16">
+   <properties>
+    <property name="active" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

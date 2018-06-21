@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="250" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="object" tilewidth="32" tileheight="32">
+  <image source="object.png" width="256" height="1024"/>
+ </tileset>
+ <tileset firstgid="257" name="scene" tilewidth="32" tileheight="32">
+  <image source="scene.png" width="1024" height="2048"/>
+ </tileset>
+ <layer name="background" width="250" height="40" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAbnEAAAQ==
+  </data>
+ </layer>
+ <layer name="pillar" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2tdtHTEQBVAlSG5DoRGFRhwacWjEkhpRaEShEH8twA9iQAPD92YX5xSwGLydC2ovdXAAAAAAAAAAAAAAAAAAAAAAAAAAAADs0sfpviegkjf7sEnHZ/uegEoO7cMmXXqvNM7twybdeq80ru3DJn33Xml8tQ//ZaTPeC/Qefz2Xmn8DPZhzZ3tZ2f2jPyN9BlHBTL2UGAG6vgb7MOaO9uTzuwZ+RvpMy4K/G4vBWagjqdgH9bc2V51Zs/I30ifcVPgd/soMAN1vAX7sKvOdsb3wV1n9oz8jfQZ3wpk7PjLviegksNgH3bV2c74PvjReWZG/qI+Y/GrQM4v5ZzGebAPGZ3tSPc14/vgT+eZGfmL+ozFfYGc38o5jahXyuhsR7qvGd8Hj51nZuQv6jMWzwVy7l6NVtQrZXS2I93XjO+D184zM/IX9RmL9wIZc69GK+qVMjrbke5rxtnz2XlmRv6iPmNxVOBvZvdqtKJeKaOzHem+Zpw9J53ZM/IX9RmLiwI5d69GK+qVMjrbke5rxtlz1Zk9I3/XA8+4KZBz92q0ol4po7Md6b5mnD13ndkz8reW89y9Gq3w/2QSdmWk+5px9szK+VrOc/dq2/UPBck1hQ==
+  </data>
+ </layer>
+ <layer name="big_cloud" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1VVuVFEAh/FpZ6aKs4K64aygbjgrqBvOCuqGs4K64awAt1XUDWcDfI8388RAQtPk+5Lf40nuPck/JxQyMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM/v3XoRDoZd4hdd4g7d4h/f4gI/4FN7qLzWzv22e/S5gEUtYxgpWsYZ1bGAzsPP5CGewiCUsYwWrWMM6NrCJz/iCr/iG7/iBn/gV2br/NtuOJbDDRIQRQRRJSEYKUpGG9Jh3OYGtJSKMCKJIQjJSkIo0pAc2mRDlDMKIIIokJCMFqUhDOnZgJ3ZhN/ZgL/Zhf/T/3pHZdi+D/WYiC9nIQS7ykI8CFKIoZucZ7DcTWchGDnKRh3wUoBBFgZ1nsM9MZCEbOchFHvJRgEIU4QAO4hAO4wiO4hiOu3OzuCpmvyUoRRnKUYFKVKEaNaiN2Xkx+y1BKcpQjgpUogrVqEFtYOfF7LMEpShDOSpQiSpUowa1OIGTOIXTOIOzOIfz7twsrurYbz0a0IgmNKMFrWhDOzpidl7HfuvRgEY0oRktaEUb2tER2Hkd+6xHAxrRhGa0oBVtaEcHLuAiLuEyruAqruG6OzeLq07224Vu9KAXfejHAAYxhOGYnXey3y50owe96EM/BjCIIQwHdt7JPrvQjR70og/9GMAghjCMG7iJW7iNO7iLe7jvzs3iaoT9jmIM45jAJKYwjRnMYi5m5yPsdxRjGMcEJjGFacxgFnOBnY+wz1GMYRwTmMQUpjGDWczhAR7iER7jCZ7iGZ67c7M/7jdpTnzF
+  </data>
+ </layer>
+ <layer name="small_cloud" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2UdOBTEQBcDRvz05H4KcD0HOhyDDDXgSK3Z/BgzYqpLe1hrJ3XLb03UAAAAAAAAAAAAAAAAAANCOxVHXLSXLycror78GKGEvvb2fHCSH+hyadJ3evklukzt9DgAA/CLvizC+2fTIXDKfLFTUL94XaVGp82sra20nO8luRf3ifZH/bCI1OZlMJdPJzJg1Wur8Os9aF8llcjVg3Zbn56F7BauplbVkPdlINsesnVLn10vWek3ekvcB69Y0P/e9owzdKzhKrRwnJ8lpclZ57dQ0P/e9o7S2V/ye+9TKQ/KYPCXPaueLkrNy3zuKvYIySs7K372jAD/DrAztMysDAH21/P8f+FTT/39gmJr+/wMAAAAAANToA8qIbwc=
+  </data>
+ </layer>
+ <layer name="hill" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt0kVTFmAYRuEPNgIiiogisUYJKaWUNQqoCBICru3uWtvdtba7a21319rurhnPf9AZZ17Pmbl+wPPMHYmYmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmf1ftYuKRGIQizi0Rzw6IAEd0QmJ6IwkdEEyuqIbUtAdqUhDOjKi/vVlfyf/YyGUyd56oCeykI0c5KIX8pCPAhSiCL3RB8UoQSnKUI6+6IeKQHbsfyyEKtlbfwxAFapRg4EYhMGoxRDUoR5D0YBGNKEZw9CCVrRheCA79j8WQiPY20iMwmiMwViMw3hMwERMwmRMwVRMw3TMwEzMwmzMwVzMC2TH/sdCaD57W4CFWITFWIKlWIblWIGVWIXVWIO1WIf12ICN2ITN2IKtgezY/1gIbWNv27EDO7ELu7EHe7EP+3EAB3EIh3EER3EMx3ECJ3EKp3EmkB37Hwuhs+ztHM7jAi7iEi7jCq7iGq7jBm7iFm7jDu7iHu7jAR7iER4HsmP/YyH0hL09xTM8xwu8xCu8xhu8xTu8xwd8xCd8xhd8xTd8xw/8xK9Adux/LITaRUciMYhFHNojHh2QgI7ohER0RhK6IBld0Q0p6I5UpCEdGdH/+rK/k/+xEMpkbz3QE1nIRg5y0Qt5yEcBClGE3uiDYpSgFGUoR1/0Q0UgO/Y/FkKV7K0/BqAK1ajBQAzCYNRiCOpQj6FoQCOa0IxhaEEr2jA8kB37H/uTfgMi4thZ
+  </data>
+ </layer>
+ <layer name="ground" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt080JwjAYBuD+bKE3x9BNdBPdRE86hp50DD25hr14aEqlqFiwBsPzQOihhO8lyZtlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCeW1F/qyJuDmA4o7L+jsu4OYDhTEO/Z3oOyZqHfi/0HJK1DP1e6Tkkax36vdHz5G3z2An+V+yzezf/k2z70O+Dnifv2OOt7vJ2xRJ7/qPm7GLleXd3n9zrOfT7oufJu3bewyRvV9cpb1fX475ne7/l1fxuhl9ozu5Vnl/N7/uvcQv9rvQcAAAAAKCXO0zCHaw=
+  </data>
+ </layer>
+ <layer name="barrier" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2OEKgjAUBlC1Z603qefOfggimrp5dY5zQILRvBvcL5tNAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQK6uPXbsjBpXjeW4qi7cxbPv/Zf+h6q9+4x/5ByqJudQv1Jyvvfs7KzN3Z3Zwyk5jzjTyzklyenxLXN//RvVw3P1U3I+zEld55534XvH4Qg5/3PX5g4Zj+rhufopNcc5P2qtKc9zWSfKlpwvPbf/zR3n7cyc59ynhJzLOhG2ZGXpO0vj04yXkvPh92r6WVrOZZ01bdf3SWHXo4tb8/Tekftf28fcOiL3XusFAAAAcAdfAzwePg==
+  </data>
+ </layer>
+ <layer name="object_image" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1rEOgjAQAFB2v8BNRuNm4qfopolu+v8fICYOasS2Uijoe8lFchYOkjtKVQEAAAAAAAAAAAAAAAAAAAAAAAAAAMDvWHXIwVjk7uMu1xt7LpZ3A2MwRP+PaT5LzZ15BwDg1eweAMB0HZs4Fai7bWJXoO6Q6szr4FvnJi6ZrpXy/b9v4pCpbqxZS3SVMqdmmqHcentePff4u1wpbbNQaka+rWs/Z6rql99QfsranhH+QV/7bey7I8e8rRPW2s+ZkuXDcUyfb97k6nu+z/18E3GcYhle8vEeutQOnZfyf2jtIng3AAAAAADEugJiixCu
+  </data>
+ </layer>
+ <layer name="monster_image" width="250" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1ksKgCAUBVDnraBZ7X+TETTpI/018xwQQQQVvD5DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4p2ZqAACs9Q/Pgy/4+v+/ibS7zuRUpkllvNttmN/xrbFcYlnIlZGr66rnlKpf9HvjJYudEWrwVr09+nakzpt6Tm1qquel6XJvAAAAAADgRwYyKAR+
+  </data>
+ </layer>
+ <objectgroup name="object" width="250" height="40">
+  <object name="dispenser" x="72" y="1032" width="16" height="16">
+   <properties>
+    <property name="active" value="true"/>
+   </properties>
+  </object>
+  <object name="monster" x="232" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmall"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="328" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="appbackstab"/>
+    <property name="b" value="behbackstab"/>
+   </properties>
+  </object>
+  <object name="brick" x="296" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="360" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="456" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="520" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="328" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickrock"/>
+    <property name="b" value="behbrickfly"/>
+   </properties>
+  </object>
+  <object name="brick" x="392" y="872" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+    <property name="hide" value="true"/>
+   </properties>
+  </object>
+  <object name="brick" x="424" y="872" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+    <property name="hide" value="true"/>
+   </properties>
+  </object>
+  <object name="prop" x="392" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="appproppiranha"/>
+    <property name="b" value="behproppiranha"/>
+    <property name="color" value="blue"/>
+   </properties>
+  </object>
+  <object name="prop" x="616" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="808" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="776" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="808" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="776" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="840" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="840" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="968" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="968" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1000" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1032" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1032" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="brick" x="1000" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakeprop"/>
+    <property name="hide" value="true"/>
+   </properties>
+  </object>
+  <object name="monster" x="744" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="840" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="904" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1000" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1064" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1160" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1224" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1384" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="apptortoise"/>
+    <property name="b" value="behtortoise"/>
+    <property name="downscope" value="2"/>
+    <property name="state" value="9"/>
+    <property name="upscope" value="3"/>
+   </properties>
+  </object>
+  <object name="monster" x="1480" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1544" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1640" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1704" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1800" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1864" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="1960" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2024" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="prop" x="1576" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="1672" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="1768" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="1512" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1576" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1640" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1704" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1768" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="1832" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="dispenser" x="2056" y="1064" width="16" height="16"/>
+  <object name="monster" x="2216" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmall"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2376" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="appbackstab"/>
+    <property name="b" value="behbackstab"/>
+   </properties>
+  </object>
+  <object name="prop" x="2632" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="2760" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="2664" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="2728" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="2728" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="2792" y="1032" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="2984" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="brick" x="2280" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="2312" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="2344" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="2376" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="2408" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="brick" x="2440" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickcoin"/>
+    <property name="b" value="behbrickmakecoin"/>
+   </properties>
+  </object>
+  <object name="dispenser" x="2485" y="873" width="16" height="16"/>
+  <object name="monster" x="2122" y="743" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2184" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2280" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2344" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2440" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2504" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2600" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2664" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2760" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2824" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2920" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="2984" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3080" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3144" y="712" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3304" y="712" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3464" y="712" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3560" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3624" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3720" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3784" y="776" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3880" y="744" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="monster" x="3944" y="774" width="16" height="16">
+   <properties>
+    <property name="a" value="appmonstersmallblack"/>
+    <property name="b" value="behmonstersmall"/>
+   </properties>
+  </object>
+  <object name="prop" x="3208" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="3464" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="3720" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="3816" y="1096" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropsflow"/>
+    <property name="b" value="behpropsflower"/>
+   </properties>
+  </object>
+  <object name="prop" x="3176" y="936" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="3176" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="3176" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="3336" y="968" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="3496" y="936" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="3496" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="prop" x="3496" y="1064" width="16" height="16">
+   <properties>
+    <property name="a" value="apppropcoin"/>
+    <property name="b" value="behpropcoinstop"/>
+   </properties>
+  </object>
+  <object name="over" x="4072" y="1096" width="16" height="16"/>
+  <object name="end" x="4264" y="936" width="16" height="16"/>
+  <object name="brick" x="488" y="1000" width="16" height="16">
+   <properties>
+    <property name="a" value="appbrickrock"/>
+    <property name="b" value="behbrickfly"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
